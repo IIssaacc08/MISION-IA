@@ -28,6 +28,8 @@ function mostraAlternativas(){
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
+        botaoJogarNovamente.addEventListener("click", jogaNovamente());
+        
     }
 
 }
@@ -41,8 +43,13 @@ function mostraResultado(){
     caixaPerguntas.textContent = "Olha só o que podemos afirmar sobre você...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
+    caixaResultado.classList.add("mostrar"); 
+    botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
-
-
-
+function jogaNovamente(){
+    atual = 0;
+    historiaFinal = "";
+    caixaResultado.classList.remove("mostrar");
+    mostraPergunta();
+}
 mostraPergunta();
