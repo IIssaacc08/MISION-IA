@@ -28,7 +28,7 @@ function mostraAlternativas(){
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
-        botaoJogarNovamente.addEventListener("click", jogaNovamente());
+        botaoJogarNovamente.addEventListener("click", jogaNovamente);
         
     }
 
